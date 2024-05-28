@@ -1,0 +1,23 @@
+trabalho de tec
+
+tradutor de maquina de turing do sipser para dujplamente infinita e vice-versa
+
+de entrada recebe um arquivo de texto.in
+dentro dele a primeira linha pode ser de 2 tipos
+;S ou ;I
+;S implica que a maquina abaixo é do Sipser
+;I implica que a maquina abaixo é com fita duplamente infinita
+
+A saida deve ser um arquivo de text.out que é a tradução do tipo de entrada no outro
+
+A estrutura dos comandos é da forma
+<current state> <current symbol> <new symbol> <direction> <new state>
+
+O estado inicial é sempre 0, alfabeto da fita é constituido de letras e digitos, sem simbolos adicionais. Estes simbolos são usados como alfabeto da fita.
+
+Os arquivos de entrada serão apenas de máquinas de Turing determinísticas e com codificação válida para o simulador.
+
+Todos os programas dados como entrada serão para reconhecimento de linguagens sobre o alfabeto {0,1}
+
+Os arquivos odd sameamount10 são arquivos de texto de teste que rodam
+odd é do tipo do sipser e sameamount é do tipo de duplamente infinita

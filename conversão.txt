@@ -1,0 +1,43 @@
+Teorema: A classe de Maquinas de Turing com fita duplamente
+infinita e equivalente a classe das Maquinas de Turing.
+Ou seja, dada uma MT M deve-se ter uma MT-DI IM que
+reconheca a mesma linguagem de M 'e', dada uma MT-DI I deve-se
+ter uma MT MI que reconheca a mesma linguagem de I.
+
+Prova:
+⇒ Dada M = hQM, ΣM, ΓM, δM, q0M, qAM, qRMi Maquina de
+Turing com fita semi-infinita. Constroi-se IM com fita duplamente
+infinita que processa da seguinte forma:
+1 - Inicia o processamento fazendo um movimento para a
+esquerda, insere um sımbolo ⊗ que não pertence ao alfabeto de entrada 'Γ' na celula com o 
+branco e retorna a direita, para o sımbolo mais a esquerda da palavra
+de entrada.
+2 - Processa δM normalmente. Toda vez que a transicao
+executada for um movimento para a esquerda, apos a
+execu¸cao do movimento IM verifica se o sımbolo a ser lido é
+⊗. Caso o seja, mantem ⊗ e faz um movimento para a
+direita, simulando o movimento estacionario da celula mais a
+esquerda da fita semi-infinita.
+
+⇐ Dada I = hQI, ΣI, ΓI, δI, q0I, qAI , qRIi uma Maquina de Turing
+com fita duplamente infinita, é possıvel construir MI, uma M´aquina
+de Turing com fita semi-infinita que simula I. MI sera tal que:
+1 - Antes de iniciar a simulacao de I, MI desloca todo o conteudo
+de sua fita uma celula para a direita, inserindo ⊗ ∈/ ΓI na
+celula mais a esquerda da fita e † ∈/ Γ no primeiro branco ap´os
+a palavra de entrada, posicionando o cabecote novamente na
+celula com o primeiro sımbolo da entrada.
+2 - Processa δI normalmente. Toda vez que a transicao
+executada for um movimento para 
+esquerda: 
+    apos a execucao do movimento MI verifica se o
+    sımbolo a ser lido é ⊗. Caso o seja, desloca
+    todo o conteudo restante da fita para a direita,
+    inserindo um espaco em branco a direita de ⊗,
+    deixando o cabecote posicionado sobre tal
+    branco.
+direita: 
+    apos a execucao do movimento MI verifica se o
+    sımbolo a ser lido é †. Caso o seja, imprime _,
+    vai para a direita, imprime † e vai para a
+    esquerda.
